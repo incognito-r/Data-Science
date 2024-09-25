@@ -1,0 +1,197 @@
+
+
+**For Loops:**
+
+1. Write a Python program that calculates the sum of all numbers from 1 to 100 using a for loop.
+sum = 0
+for i in range(1, 101):
+    sum += i
+print("Sum of all numbers from 1 to 100 is:", sum)
+
+
+2. Create a Python program that prints the multiplication table (up to 10) of 18 using for loop.
+for i in range(1, 11):
+    print(f"18 x {i} = {18 * i}")
+
+
+3. Write a Python program that takes a list of integers and returns the count of even numbers using a for loop.
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+count = 0
+for num in numbers:
+    if num % 2 == 0:
+        count += 1
+print("Count of even numbers:", count)
+
+
+4. Develop a Python program that finds the largest element in a list using a for loop.
+
+
+numbers = [1, 5, 3, 9, 2, 8]
+max_num = numbers[0]
+for num in numbers:
+    if num > max_num:
+        max_num = num
+print("Largest element in the list is:", max_num)
+
+5. Create a Python program that prints the Fibonacci sequence up to a 12 number( value term 144) using a for loop.
+
+n1, n2 = 0, 1
+count = 0
+print("Fibonacci sequence up to 12 terms:")
+while count < 12:
+    print(n1)
+    nth = n1 + n2
+    n1 = n2
+    n2 = nth
+    count += 1
+
+
+**While Loops:**
+
+1. Write a Python program to find the factorial of 13 using a while loop.
+
+num = 13
+factorial = 1
+while num > 0:
+    factorial *= num
+    num -= 1
+print("Factorial of 13 is:", factorial)
+
+
+2. Create a Python program that adds all the natural numbers up 25 number using a while loop.
+sum = 0
+num = 1
+while num <= 25:
+    sum += num
+    num += 1
+print("Sum of all natural numbers up to 25 is:", sum)
+
+
+3. Create a Python program that generates a random number between 1 and 100 and lets the user guess it using a while loop.
+
+import random
+
+number_to_guess = random.randint(1, 100)
+guess = None
+
+while guess != number_to_guess:
+    guess = int(input("Guess the number between 1 and 100: "))
+    if guess < number_to_guess:
+        print("Too low!")
+    elif guess > number_to_guess:
+        print("Too high!")
+print("Congratulations! You guessed the number.")
+
+
+
+4. Develop a program that prints the first 10 prime numbers using a while loop
+count = 0
+num = 2
+primes = []
+
+while count < 10:
+    is_prime = True
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        primes.append(num)
+        count += 1
+    num += 1
+
+print("First 10 prime numbers are:", primes)
+
+
+5. Develop a program that prompts the user to enter a sentence and then counts the number of vowels (a, e, i, o, u) in that sentence using a while loop.
+
+sentence = input("Enter a sentence: ").lower()
+vowels = 'aeiou'
+count = 0
+i = 0
+
+while i < len(sentence):
+    if sentence[i] in vowels:
+        count += 1
+    i += 1
+
+print("Number of vowels in the sentence:", count)
+
+
+**If Conditions:**
+
+1. Write a Python program to check if a number is prime or not using if conditions.
+
+num = int(input("Enter a number: "))
+is_prime = True
+
+if num <= 1:
+    is_prime = False
+else:
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+
+if is_prime:
+    print(f"{num} is a prime number.")
+else:
+    print(f"{num} is not a prime number.")
+
+
+2. Create a Python program that finds the maximum of three numbers using if-else conditions.
+
+a = int(input("Enter the first number: "))
+b = int(input("Enter the second number: "))
+c = int(input("Enter the third number: "))
+
+if a >= b and a >= c:
+    max_num = a
+elif b >= a and b >= c:
+    max_num = b
+else:
+    max_num = c
+
+print("The maximum of the three numbers is:", max_num)
+
+
+3. Write a Python program that prompts the user to enter their age. If the age is less than 18, prompt them to enter their gender. If their gender is 'male', print "He is a boy", if 'female', print "She is a girl".
+
+age = int(input("Enter your age: "))
+if age < 18:
+    gender = input("Enter your gender (male/female): ").lower()
+    if gender == 'male':
+        print("He is a boy.")
+    elif gender == 'female':
+        print("She is a girl.")
+    else:
+        print("Invalid gender entered.")
+else:
+    print("You are an adult.")
+
+
+
+4. Develop a Python program that determines the type of a triangle (equilateral, isosceles, or scalene) based on the lengths of its sides using if-elif-else conditions.
+
+
+a = float(input("Enter the length of the first side: "))
+b = float(input("Enter the length of the second side: "))
+c = float(input("Enter the length of the third side: "))
+
+if a == b == c:
+    print("The triangle is equilateral.")
+elif a == b or b == c or a == c:
+    print("The triangle is isosceles.")
+else:
+    print("The triangle is scalene.")
+
+
+5. Create a Python program that checks if a given year is a leap year or not using if conditions.
+
+
+year = int(input("Enter a year: "))
+
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a leap year.")
+else:
+    print(f"{year} is not a leap year.")
