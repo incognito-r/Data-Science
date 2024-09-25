@@ -1,0 +1,25 @@
+
+
+**For Loops:**
+
+1. Write a Python program that calculates the sum of all numbers from 1 to 100 using a for loop.
+2. Create a Python program that prints the multiplication table (up to 10) of 18 using for loop.
+3. Write a Python program that takes a list of integers and returns the count of even numbers using a for loop.
+4. Develop a Python program that finds the largest element in a list using a for loop.
+5. Create a Python program that prints the Fibonacci sequence up to a 12 number( value term 144) using a for loop.
+
+**While Loops:**
+
+1. Write a Python program to find the factorial of 13 using a while loop.
+2. Create a Python program that adds all the natural numbers up 25 number using a while loop.
+3. Create a Python program that generates a random number between 1 and 100 and lets the user guess it using a while loop.
+4. Develop a program that prints the first 10 prime numbers using a while loop
+5. Develop a program that prompts the user to enter a sentence and then counts the number of vowels (a, e, i, o, u) in that sentence using a while loop.
+
+**If Conditions:**
+
+1. Write a Python program to check if a number is prime or not using if conditions.
+2. Create a Python program that finds the maximum of three numbers using if-else conditions.
+3. Write a Python program that prompts the user to enter their age. If the age is less than 18, prompt them to enter their gender. If their gender is 'male', print "He is a boy", if 'female', print "She is a girl".
+4. Develop a Python program that determines the type of a triangle (equilateral, isosceles, or scalene) based on the lengths of its sides using if-elif-else conditions.
+5. Create a Python program that checks if a given year is a leap year or not using if conditions.

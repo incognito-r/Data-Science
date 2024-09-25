@@ -1,0 +1,52 @@
+
+### List Methods Questions
+
+1. **Append Method:**
+   - Write a Python program to append the number 20 to a list of numbers `[1, 2, 3, 4, 5]` and print the updated list.
+
+2. **Extend Method:**
+   - Write a Python program to extend a list `[1, 2, 3]` by adding another list `[4, 5, 6]` to it and print the updated list.
+
+3. **Remove Method:**
+   - Write a Python program to remove the first occurrence of the number 3 from the list `[1, 2, 3, 4, 3, 5]` and print the updated list.
+
+4. **Sort Method:**
+   - Write a Python program to sort a list of numbers `[4, 2, 8, 1, 7]` in ascending order and print the sorted list.
+
+5. **Index Method:**
+   - Write a Python program to find the index of the number 7 in the list `[10, 20, 7, 30, 40]` and print the index.
+
+### Tuple Methods Questions
+
+1. **Count Method:**
+   - Write a Python program to count the number of times the number 5 appears in the tuple `(1, 2, 5, 5, 3, 5, 4)` and print the count.
+
+2. **Index Method:**
+   - Write a Python program to find the index of the number 8 in the tuple `(2, 4, 6, 8, 10)` and print the index.
+
+3. **Concatenation:**
+   - Write a Python program to concatenate two tuples `(1, 2, 3)` and `(4, 5, 6)` and print the result.
+
+4. **Slicing:**
+   - Write a Python program to slice the tuple `(1, 2, 3, 4, 5)` to get the first three elements and print the sliced tuple.
+
+5. **Length:**
+   - Write a Python program to find the length of the tuple `(10, 20, 30, 40, 50)` and print the length.
+
+### Dictionary Methods Questions
+
+1. **Update Method:**
+   - Write a Python program to update the dictionary `{1: 'a', 2: 'b'}` with another dictionary `{2: 'c', 3: 'd'}` and print the updated dictionary.
+
+2. **Keys Method:**
+   - Write a Python program to get all the keys from the dictionary `{'name': 'John', 'age': 25, 'city': 'New York'}` and print the keys.
+
+3. **Values Method:**
+   - Write a Python program to get all the values from the dictionary `{'name': 'Alice', 'age': 30, 'city': 'Los Angeles'}` and print the values.
+
+4. **Get Method:**
+   - Write a Python program to get the value of the key 'age' from the dictionary `{'name': 'Bob', 'age': 35, 'city': 'Chicago'}` and print the value.
+
+5. **Items Method:**
+   - Write a Python program to get all the key-value pairs from the dictionary `{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}` and print the pairs.
+
