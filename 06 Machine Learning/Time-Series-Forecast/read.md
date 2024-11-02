@@ -41,17 +41,72 @@ Time series forecasting is a statistical and machine learning technique used to 
 
 $y_t = f(y_{t-1}, y_{t-2}, y_{t-3}, y_{t-4})$
 
-## Components of ....
+## Components of Time Series Analysis
 
-**Trend ($T_t$)**: Ouantity is either increasing or decereasing.
-- Positive: Increasing
-- Negative: Decresing
-- Sideways: Neither increasing nor decreasing
+**Trend ($T_t$)**: Represents the overall direction in which the time series data is moving, whether it is increasing, decreasing, or remaining stable.
 
-**Seasonality ($S_t$)**: Over a period of time demand repeats but less than a year (hourly, daily, weekly, etc).
+- Positive: Indicates a long-term upward movement.
+- Negative: Indicates a long-term downward movement.
+- Sideways: Neither increasing nor decreasing, indicating stability over time.
 
-**Cyclicity ($C_t$)**: Over a period of time more than a year, demand repeats.
+**Seasonality ($S_t$)**: Refers to periodic fluctuations in data that occur over a period of less than a year (e.g., hourly, daily, weekly). It captures repetitive patterns or cycles at consistent intervals.
 
-**Irregular Term ($I_t$)**: Irregular term represents random, unpredictable variations in the time series. It accounts for any noise or residual fluctuations that cannot be explained by trends, seasonality, or cyclic components.
+**Cyclicity ($C_t$)**: Describes patterns or cycles that recur over a period longer than a year, often tied to economic or business cycles.
 
-### Decomposition: ()
+**Irregular Term ($I_t$)**: If we remove the trend , seasonality from the Series , left over / data without pattern is called residual Represents random, unpredictable variations in the time series, often caused by factors outside the control of the system. It accounts for residual fluctuations that are not explained by trends, seasonality, or cyclic components.
+
+
+## Stationary Series: 
+A series is said to be stationary if its mean and variance are constant over a period of time because if not then we cant run ARIMA(Auto-regressive Integrated Moving Average) model. To check stationarity we can use graphs or hypothesis testing.
+
+To convert a stationary series to moving series several method are used. 
+- Detrend (Remove the trend)  - ARMIA (Autoregressive Integrated Moving Average
+)
+- Deseasoning
+- Transform
+
+
+
+### Techniques for Time Series Forecasting
+
+| **Basic**                   | **Intermediate**                                          | **Advanced**       | **Very Advanced** |
+|-----------------------------|-----------------------------------------------------------|---------------------|--------------------|
+| Simple Moving Average       | Decomposition                                            | AR (Autoregression) | VAR (Vector Autoregression) |
+| Weighted Moving Average     | Exponential Smoothing Techniques (e.g., Holt-Winters)    | MA (Moving Average) | ARCH (Autoregressive Conditional Heteroskedasticity) |
+| Centered Moving Average     | Single Exponential Smoothing                             | ARMA (Autoregressive Moving Average) | GARCH (Generalized ARCH) |
+|                             | Double Exponential Smoothing                             | ARIMA (Autoregressive Integrated Moving Average) | Wavelet Transform |
+|                             | Triple Exponential Smoothing (Holt-Winters)              | SARIMA (Seasonal ARIMA) | RNN (Recurrent Neural Network) |
+|                             |                                                          | ARIMAX (ARIMA with Exogenous Variables) | LSTM (Long Short-Term Memory) |
+|                             |                                                          | SARIMAX (Seasonal ARIMA with Exogenous Variables) | GRU (Gated Recurrent Unit) |
+
+
+### Decomposition: 
+Time series decomposition involves breaking down a time series into its fundamental components to better understand the underlying patterns. This approach helps to separate and analyze distinct influences on the data.
+
+
+The common decomposition model are: 
+
+Additive: 
+$$
+Y_t = T_t + S_t + C_t + I_t
+$$
+
+Multiplicative: 
+$$
+Y_t = T_t \times S_t \times C_t \times I_t
+$$
+
+### Exponential Moving Average: 
+The Exponential Moving Average (EMA) is a type of moving average that places a greater weight and significance on the most recent data points. Unlike the Simple Moving Average (SMA), which gives equal weight to all observations in a period, EMA assigns exponentially decreasing weights as the observations get older. This approach makes EMA more responsive to recent price changes, making it popular in time series forecasting and financial analysis.
+
+The formula for the Exponential Moving Average (EMA) at time $t$ is given by:
+
+$$
+\text{EMA}_t = \alpha \cdot X_t + (1 - \alpha) \cdot \text{EMA}_{t-1}
+$$
+
+where:
+- $X_t$ is the current value or observation.
+- $\alpha$ is the smoothing factor, calculated as $\alpha = \frac{2}{n + 1}$.
+- $\text{EMA}_{t-1}$ is the EMA value from the previous period.
+- $n$ is the number of periods for calculating the EMA.
