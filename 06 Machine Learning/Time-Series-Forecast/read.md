@@ -96,8 +96,7 @@ $$Y_t = T_t \times S_t \times C_t \times I_t$$
 The Exponential Moving Average (EMA) is a type of moving average that places a greater weight and significance on the most recent data points. Unlike the Simple Moving Average (SMA), which gives equal weight to all observations in a period, EMA assigns exponentially decreasing weights as the observations get older. This approach makes EMA more responsive to recent price changes, making it popular in time series forecasting and financial analysis.
 
 The formula for the Exponential Moving Average (EMA) at time $t$ is given by:
-
-$$\text{EMA}_t = \alpha \cdot X_t + (1 - \alpha) \cdot \text{EMA}_{t-1}$$
+$$ \text{EMA}_t = \alpha \cdot X_t + (1 - \alpha) \cdot \text{EMA}_{t-1} $$
 
 where:
 - $X_t$ is the current value or observation.
