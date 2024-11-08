@@ -9,6 +9,7 @@ Time series forecasting is a statistical and machine learning technique used to 
 - Cyclicality: Fluctuations that are not of a fixed period, often influenced by external economic factors.
 - Noise: Random variation or irregular fluctuations that are not part of the actual pattern.
 
+
 ## Common Methods for Time Series Forecasting
 **Statistical Methods:**
 - ARIMA (Auto-Regressive Integrated Moving Average): Useful for univariate time series without strong seasonality.
@@ -19,13 +20,6 @@ Time series forecasting is a statistical and machine learning technique used to 
 - LSTM (Long Short-Term Memory): A neural network that handles sequential dependencies well.
 - Prophet: A forecasting model developed by Facebook, good for data with strong seasonality.
 - XGBoost and Random Forests: Tree-based models that can be used for time series with some modifications, though they’re typically more suited for non-sequential data.
-
-## Types of Data
-
-| Aspect        | Temporal Variation | Stationarity | Seasonality | Trend |
-|---------------|--------------------|--------------|-------------|-------|
-| Object        | Varies             | Does Not Vary| Varies      | Varies|
-| Time          | Does Not Vary      | Varies       | Varies      | Varies|
 
 
 ## Time Series Analysis: 
@@ -62,7 +56,7 @@ This is the basic form of an **autoregressive (AR) model** for time series forec
 - Negative: Indicates a long-term downward movement.
 - Sideways: Neither increasing nor decreasing, indicating stability over time.
 
-**Seasonality ($S_t$)**: Refers to periodic fluctuations in data that occur over a period of less than a year (e.g., hourly, daily, weekly). It captures repetitive patterns or cycles at consistent intervals.
+**Seasonality ($S_t$)**: Refers to periodic fluctuations in data that occur over a period of less than a year (e.g., hourly, daily, weekly). It captures repetitive patterns/cycles/trends over time.
 
 **Cyclicity ($C_t$)**: Describes patterns or cycles that recur over a period longer than a year, often tied to economic or business cycles.
 
@@ -70,14 +64,22 @@ This is the basic form of an **autoregressive (AR) model** for time series forec
 
 
 ## Stationary Series: 
-A series is said to be stationary if its mean and variance are constant over a period of time because if not then we cant run ARIMA(Auto-regressive Integrated Moving Average) model. To check stationarity we can use graphs or hypothesis testing.
+A stationary time series has constant mean and variance over time, which is essential for many forecasting models, like ARIMA. If a series is non-stationary, it needs to be converted to stationary form before applying such models. 
 
-To convert a stationary series to moving series several method are used. 
-- Detrend (Remove the trend)  - ARMIA (Autoregressive Integrated Moving Average
-)
-- Deseasoning
-- Transform
+Check for Stationarity:
+- Visual Inspection:
+    - Plot the time series data to observe trends, seasonality, and variability.
+    - Stationary series often show constant mean and variance over time.
+    - Visual inspection can give initial insights but may not be conclusive.
+- Statistical Tests:
+    - ADG (Augmented Dickey-Fuller) Test
+    - KPPS
 
+Key methods to achieve stationarity include:
+
+- Detrending: Removing trends by differencing or regression.
+- Deseasoning: Eliminating seasonal patterns using seasonal differencing or decomposition.
+- Transformation: Applying mathematical functions (e.g., log or Box-Cox) to stabilize variance.
 
 
 ### Techniques for Time Series Forecasting
