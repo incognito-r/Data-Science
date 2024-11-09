@@ -33,10 +33,7 @@ Time series forecasting is a statistical and machine learning technique used to 
 
 ## Equation
 
-$y_t = f(y_{t-1}, y_{t-2}, y_{t-3}, y_{t-4})$
-
 The general form can be written as:
-
 $$
 y_t = m_1 y_{t-1} + m_2 y_{t-2} + \dots + m_p y_{t-p} + c
 $$
