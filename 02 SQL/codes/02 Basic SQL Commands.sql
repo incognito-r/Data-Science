@@ -104,5 +104,5 @@ FROM Customers A
 INNER JOIN Customers B
 ON A.JoinDate > B.JoinDate;
 
-# Correct keyword order: SELECT -> FROM -> JOIN(ON) -> WHERE -> ORDER BY -> HAVING -> ORDER BY -> LIMIT
+# Correct keyword order: SELECT -> FROM -> JOIN(ON) -> WHERE -> GROUP BY -> HAVING -> ORDER BY -> LIMIT
 
