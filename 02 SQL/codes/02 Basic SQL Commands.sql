@@ -11,7 +11,8 @@ DESCRIBE Books;
 # View relationships
 SHOW CREATE TABLE Books;
 
-# select 3 rows from a table
+# select rows from a table
+SELECT * FROM Books;
 SELECT * FROM Books LIMIT 5;
 
 # select specific columns from a table
@@ -50,7 +51,10 @@ SELECT Genre, COUNT(Title) FROM Books GROUP BY Genre;
 SELECT Genre, MIN(Price) FROM Books GROUP BY Genre;
 
 # ALIAS - AS
-SELECT Genre, MIN(Price) AS MinimumPrice FROM Books GROUP BY Genre;
+SELECT Genre, MIN(Price) AS MinimumPrice 
+FROM Books
+WHERE Price < 15
+GROUP BY Genre;
 
 # HAVING
 -- The execution order of the different SQL keywords doesn't allow you to filter with the WHERE clause on the result of an aggregate function (COUNT, SUM, etc.). 
